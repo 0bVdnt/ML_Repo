@@ -70,14 +70,14 @@ The cost function measures how "wrong" our model is. It calculates the squared d
 
 The algorithm uses the partial derivatives of the cost function with respect to $w$ and $b$ to determine this direction:
 
-* $$\frac{\partial J(w,b)}{\partial b}  = \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})$$
+$$\frac{\partial J(w,b)}{\partial b}  = \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) - y^{(i)})$$
 
-* $$\frac{\partial J(w,b)}{\partial w}  = \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) -y^{(i)})x^{(i)}$$
+$$\frac{\partial J(w,b)}{\partial w}  = \frac{1}{m} \sum\limits_{i = 0}^{m-1} (f_{w,b}(x^{(i)}) -y^{(i)})x^{(i)}$$
 
 These derivatives are the "gradient" of the cost function. With each iteration, the parameters are updated using the following rules:
 
-* $w := w - \alpha \frac{\partial J(w,b)}{\partial w}$
+$w := w - \alpha \frac{\partial J(w,b)}{\partial w}$
 
-* $b := b - \alpha \frac{\partial J(w,b)}{\partial b}$
+$b := b - \alpha \frac{\partial J(w,b)}{\partial b}$
 
 Here, $\alpha$ is the **learning rate**, a small number that controls the size of each step. The process continues until the parameters converge to values that give the lowest possible cost.
